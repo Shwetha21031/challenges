@@ -1,0 +1,136 @@
+@font-face {
+ font-family: figtree-variable;
+ src: url(./assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+@font-face {
+ font-family: figtree-italic;
+ src: url(./assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+
+:root {
+  --clr-yellow: #f4d04e;
+  --clr-white: #ffffff;
+  --gray-500: #6b6b6b;
+  --gray-950: #121212;
+}
+
+::selection {
+    background-color: var(--gray-950);
+    color: var(--clr-yellow);
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: var(--gray-950);
+    color: var(--clr-yellow);
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: var(--gray-950);
+    color: var(--clr-yellow);
+}
+
+::-ms-selection {
+    background-color: var(--gray-950);
+    color: var(--clr-yellow);
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: var(--gray-950);
+    color: var(--clr-yellow);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--clr-yellow);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: figtree-variable;
+}
+
+.container{
+    width: 90%;
+    background-color: var(--clr-white);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.7) 5px 5px;
+    padding: 20px;
+    max-width: 400px;
+    border: 1px solid black;
+}
+
+.container:hover{
+    scale: 1.1;
+    transition: 0.2s ease;
+}
+
+.banner img{
+border-radius: 10px;
+width: 100%;
+max-width: 380px;
+}
+
+.container .btn{
+    background-color: var(--clr-yellow);
+    width: 100px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    margin: 10px 0px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background-color: var(--gray-950);
+    color: var(--clr-yellow);
+    transition: 0.2s ease;
+}
+
+.date{
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+h1{
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: figtree-variable;
+}
+
+h1:hover{
+    color: var(--clr-yellow);
+    cursor: pointer;
+}
+
+p{
+    color: var(--gray-500);
+    margin: 10px 0;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.avatar img{
+    width: 30px;
+}
+
+.avatar img:hover{
+    scale: 1.1;
+    transition: 0.2s ease-in-out;
+}
+.user .name{
+    margin: 0px 10px;
+    font-weight: bold;
+}
