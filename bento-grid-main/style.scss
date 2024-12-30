@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+$Purple-100: #dacffc;
+$Purple-500: #7650dc;
+
+$Yellow-100: #f9eee1;
+$Yellow-500: #ffcb6b;
+
+$White: #ffffff;
+$Black: #121212;
+
+$ff-main: "DM Sans", serif;
+$fs-body: 1.125rem;
+$fs-heading: 1.75rem;
+
+$fw-400: 400;
+$fw-500: 500;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $ff-main;
+  font-weight: $fw-400;
+  line-height: 1;
+  color: $Black;
+  background: #e0e0e0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  letter-spacing: -0.1em;
+
+  .bento-grid-container {
+    display: grid;
+    gap: 1rem;
+    width: 800px;
+    height: 600px;
+    grid-template-rows: 1fr 0.3fr 0.7fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "i1 i2 i2 i3"
+      "i1 i5 i6 i3"
+      "i4 i5 i6 i3"
+      "i4 i7 i8 i8";
+    overflow: hidden;
+    
+    .item {
+      border-radius: 5px;
+    }
+
+    .item-1 {
+      grid-area: i1;
+      background-color: $Yellow-100;
+      padding: 40px 25px;
+      font-weight: $fw-500;
+      font-size: 1.5rem;
+
+      span {
+        color: #7650dc;
+        font-style: italic;
+      }
+
+      img {
+        width: 90%;
+        margin: 15px auto;
+      }
+    }
+
+    .item-2 {
+      grid-area: i2;
+      background-color: $Purple-500;
+      font-weight: 500;
+      color: $White;
+      font-size: 2.5rem;
+      text-align: center;
+      letter-spacing: normal;
+      padding: 35px;
+      span {
+        color: $Yellow-500;
+      }
+      img {
+        width: 50%;
+        padding: 10px;
+        display: block;
+        margin: auto;
+      }
+      p {
+        font-size: 12px;
+        letter-spacing: normal;
+      }
+    }
+    .item-3 {
+      grid-area: i3;
+      background-color: $Purple-100;
+      font-size: 1.3em;
+      padding: 30px;
+      font-weight: 600;
+      overflow: hidden;
+      position: relative;
+
+      img {
+        position: relative;
+        display: block;
+        width: 250px;
+        translate: 0px 10px;
+      }
+      p {
+        font-weight: $fw-500;
+        font-size: 12px;
+        margin-top: 25px;
+        letter-spacing: normal;
+      }
+    }
+    .item-4 {
+      grid-area: i4;
+      background-color: $Yellow-500;
+      display: flex;
+      flex-direction: column;
+      p {
+        font-weight: $fw-500;
+        font-size: 1.6rem;
+        padding: 15px;
+        width: 80%;
+      }
+      img {
+        display: block;
+        width: 90%;
+        margin: 20px 15px;
+        padding: 5px;
+      }
+    }
+    .item-5 {
+      grid-area: i5;
+      background-color: $White;
+      position: relative;
+      overflow: hidden;
+      img {
+        position: relative;
+        width: 230px;
+        margin: 10px;
+      }
+      p {
+        padding: 0px 10px;
+        font-weight: $fw-500;
+        font-size: 1.5em;
+        width: 90%;
+      }
+    }
+    .item-6 {
+      grid-area: i6;
+      background-color: $Yellow-500;
+      font-weight: $fw-500;
+      overflow: hidden;
+      p {
+        font-size: 1.3em;
+        margin: 5px;
+        width: 75%;
+        padding: 10px;
+        font-weight: $fw-500;
+      }
+      img {
+        position: relative;
+        width: 90%;
+        margin: 0px 10px;
+      }
+    }
+    .item-7 {
+      grid-area: i7;
+      background-color: $White;
+      font-size: 2.5em;
+      font-weight: $fw-500;
+      padding: 10px;
+      p {
+        font-weight: $fw-400;
+        letter-spacing: normal;
+        font-size: 14px;
+        margin: 10px 0px;
+      }
+      img {
+        width: 80%;
+        margin: 20px 0px 10px;
+      }
+    }
+    .item-8 {
+      grid-area: i8;
+      background-color: $Purple-500;
+      color: $White;
+      display: flex;
+      img {
+        padding: 20px;
+        width: 50%;
+      }
+      p {
+        font-weight: $fw-500;
+        color: $White;
+        letter-spacing: normal;
+        font-size: 1.6em;
+        margin: auto 0px;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .bento-grid-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "i1"
+      "i2"
+      "i3"
+      "i4"
+      "i5"
+      "i6"
+      "i7"
+      "i8";
+  }
+
+  .item {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
